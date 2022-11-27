@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package v1.server;
+
+service UserService {
+  rpc FindOneById (UserByIdRequest) returns (UserDto) {}
+}
+
+message UserByIdRequest {
+  string id = 1;
+}
+
+message UserDto {
+  string id = 1;
+  string name = 2;
+}
